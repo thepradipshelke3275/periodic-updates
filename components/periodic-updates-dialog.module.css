@@ -1,0 +1,346 @@
+.dialogHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+}
+
+.dialogHeaderLeft {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.dialogHeaderLeft h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.dialogHeaderRight {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.dialogContent {
+  padding: 0 !important;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+/* Timeline View */
+.timelineContainer {
+  position: relative;
+  padding: 2rem 1rem;
+}
+
+.timelineContainer::before {
+  content: "";
+  position: absolute;
+  left: 2.5rem;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, #e5e7eb 0%, #e5e7eb 100%);
+}
+
+.timelineItem {
+  position: relative;
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  padding-left: 1rem;
+}
+
+.timelineMarker {
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.25rem;
+  box-shadow: 0 0 0 4px white, 0 0 0 6px rgba(0, 0, 0, 0.05);
+}
+
+.timelineContent {
+  flex: 1;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.2s ease;
+}
+
+.timelineContent:hover {
+  border-color: #d1d5db;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.timelineHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.timelineDate {
+  font-size: 0.875rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.timelineTitle {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  line-height: 1.4;
+}
+
+.timelineOrg {
+  margin: 0;
+  font-size: 0.9375rem;
+  color: #6b7280;
+  display: flex;
+  align-items: center;
+}
+
+/* Grid View */
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.gridCard {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.gridCard:hover {
+  border-color: #d1d5db;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+}
+
+.gridCardHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem;
+  background: #f9fafb;
+  border-left: 4px solid;
+}
+
+.gridCardIcon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+}
+
+.gridCardMeta {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.gridCardDate {
+  font-size: 0.8125rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.gridCardBody {
+  padding: 1.25rem;
+}
+
+.gridCardBody h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  line-height: 1.4;
+}
+
+.gridCardOrg {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #6b7280;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Grouped View */
+.groupedContainer {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.groupedSection {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+  background: white;
+}
+
+.groupedHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.groupedHeaderLeft {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.groupedIcon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.125rem;
+}
+
+.groupedHeaderLeft h3 {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.groupedItems {
+  display: flex;
+  flex-direction: column;
+}
+
+.groupedItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid #f3f4f6;
+  transition: background-color 0.2s ease;
+}
+
+.groupedItem:last-child {
+  border-bottom: none;
+}
+
+.groupedItem:hover {
+  background-color: #f9fafb;
+}
+
+.groupedItemContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex: 1;
+}
+
+.groupedItemTitle {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.groupedItemOrg {
+  font-size: 0.875rem;
+  color: #6b7280;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.groupedItemDate {
+  font-size: 0.8125rem;
+  color: #9ca3af;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* Empty State */
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.emptyState i {
+  font-size: 4rem;
+  color: #d1d5db;
+  margin-bottom: 1.5rem;
+}
+
+.emptyState h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.emptyState p {
+  margin: 0;
+  font-size: 0.9375rem;
+  color: #6b7280;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .gridContainer {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .timelineContainer {
+    padding: 1rem 0.5rem;
+  }
+
+  .timelineItem {
+    gap: 1rem;
+  }
+
+  .timelineMarker {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1rem;
+  }
+
+  .groupedContainer {
+    padding: 1rem;
+  }
+
+  .dialogHeaderLeft h2 {
+    font-size: 1.25rem;
+  }
+}
